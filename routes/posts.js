@@ -8,13 +8,13 @@ import {
 } from "../controllers/postController.js";
 const router = express.Router();
 
-// Get all posts
+// Get all Posts
 router.get("/", getPosts);
 
-// Get single post
+// Get single Post
 router.get("/:id", getPost);
 
-// Create new post
+// Create new Post
 router.post("/", createPost);
 
 // Update Post

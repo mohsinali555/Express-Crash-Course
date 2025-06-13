@@ -2,7 +2,7 @@ const output = document.querySelector("#output");
 const button = document.querySelector("#get-posts-btn");
 const form = document.querySelector("#add-post-form");
 
-// Get and show posts
+// Get and Show Posts
 async function showPosts() {
   try {
     const res = await fetch("http://localhost:8000/api/posts");
@@ -23,7 +23,7 @@ async function showPosts() {
   }
 }
 
-// Submit new post
+// Submit the New Post
 async function addPost(e) {
   e.preventDefault();
   const formData = new FormData(this);
@@ -53,6 +53,8 @@ async function addPost(e) {
   }
 }
 
-// Event listeners
+// Event listener for button
 button.addEventListener("click", showPosts);
+
+// Event listener for form
 form.addEventListener("submit", addPost);
