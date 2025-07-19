@@ -1,4 +1,4 @@
-// Create Middleware To Handle Errors
+// Create Middleware To Handle the Errors
 const errorHandler = (err, req, res, next) => {
   if (err.status) {
     res.status(err.status).json({ msg: err.message });

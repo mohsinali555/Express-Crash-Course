@@ -4,7 +4,7 @@ let posts = [
   { id: 3, title: "Post Three" },
 ];
 
-// @desc    Get all posts
+// @desc    Get the all posts
 // @route   GET /api/posts
 export const getPosts = (req, res, next) => {
   const limit = parseInt(req.query.limit);
@@ -47,7 +47,7 @@ export const createPost = (req, res, next) => {
   res.status(201).json(posts);
 };
 
-// @desc   Update post
+// @desc   Update the post
 // @route  PUT /api/posts/:id
 export const updatePost = (req, res, next) => {
   const id = parseInt(req.params.id);
@@ -63,7 +63,7 @@ export const updatePost = (req, res, next) => {
   res.status(200).json(posts);
 };
 
-// @desc   Delete post
+// @desc   Delete the post
 // @route  DELETE /api/posts/:id
 export const deletePost = (req, res, next) => {
   const id = parseInt(req.params.id);
